@@ -8,6 +8,7 @@ import { API_KEY } from '../constants';
 import { MenuContainer } from '../MenuContainer';
 import { ItemCard } from '../Card';
 import { getPlaceData } from '../../api';
+
 /**
 * @author Birdev
 * @function Discover
@@ -21,6 +22,7 @@ export const Discover = () => {
     const [bl_lon, setBl_lon]=useState(null)
     const [tr_lat, setTr_lat]=useState(null)
     const [tr_lon, setTr_lon]=useState(null)
+    const key= process?.env?.API_KEY
     const navigation = useNavigation()
     useLayoutEffect(()=>{
         navigation.setOptions({
@@ -30,7 +32,7 @@ export const Discover = () => {
 
    useEffect(()=>{
       setISLoding(true)
-      getPlaceData(bl_lon,bl_lat,tr_lat,tr_lon , aciveState)
+      getPlaceData(bl_lon,bl_lat,tr_lat, tr_lon , aciveState)
         .then(data =>{
         setMainData(data)
         setInterval(()=>{
@@ -71,7 +73,7 @@ export const Discover = () => {
                         console.log({bl_lat,bl_lon,tr_lat,tr_lon});
                     }}
                     query={{
-                        key: 'AIzaSyBm5TKBhinXHT-LMFqzSZQhgStf8JidHz8',
+                        key: API_KEY,
                         language: 'en',
                     }} />
             </View>
