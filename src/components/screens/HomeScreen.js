@@ -27,7 +27,7 @@ const HomeScreen = () => {
           <Text className='text-[#121212] text-[42px]'>Enjoy your search</Text>
           <Text className='text-[#4DABB7] text-[38px] font-bold'>Amazing Moment</Text>
           <Text className='text-[#161c1d] text-base'>
-            klkllkl lölkkl skljskljlk
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
          </Text>
         </View>
          {/* circle section */}

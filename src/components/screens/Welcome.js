@@ -1,4 +1,5 @@
-import React from 'react'
+import { useNavigation } from '@react-navigation/native'
+import React ,{useLayoutEffect}from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
 
@@ -6,7 +7,15 @@ import { View, Text, StyleSheet } from 'react-native'
 * @author
 * @function 
 **/
-const WelcomeScreen = () => {
+const ItemScreen = ({route}) => {
+  const navigation = useNavigation()
+  const data = route?.params?.param;
+  useLayoutEffect(()=>{
+    navigation.setOptions({
+      headerShown:false
+    })},[])
+
+   console.log('item card ', data)
  return(
   <View >
     <Text>WelcomeScreen</Text>
@@ -14,4 +23,4 @@ const WelcomeScreen = () => {
   )
 }
 
-export default WelcomeScreen
+export default ItemScreen
