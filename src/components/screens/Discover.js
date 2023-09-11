@@ -12,7 +12,7 @@ import { getPlaceData } from '../../api';
 /**
 * @author Birdev
 * @function Discover
-*AIzaSyBm5TKBhinXHT-LMFqzSZQhgStf8JidHz8
+*
 **/
 export const Discover = () => {
     const [aciveState ,setActiveState]= useState('restaurants')
